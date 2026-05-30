@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BonBonVita® 大彩椒 — 云南玉溪 海拔1620m</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --red:#F93B21;--orange:#FF7C10;--yellow:#FFCE00;--brown:#7C2E2E;
+  --green:#008400;--black:#1a1a1a;--sky:#43C7F5;--pink:#FF9FB8;
+  --gray-50:#f7f4f0;--gray-100:#f0ede8;
+  --text:#1a1a1a;--text-2:#555;--text-3:#999;--border:rgba(0,0,0,0.1);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans SC',sans-serif;color:var(--text);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+/* ══════════ NAV ══════════ */
+.nav{position:sticky;top:0;z-index:300;display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:56px;background:rgba(255,255,255,0.94);backdrop-filter:blur(16px);border-bottom:0.5px solid var(--border)}
+.nav-logo{font-family:'Nunito',sans-serif;font-size:17px;font-weight:900;color:var(--black);text-decoration:none;cursor:pointer}
+.nav-logo span{color:var(--green)}
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{font-size:13px;color:var(--text-2);text-decoration:none;cursor:pointer;transition:color .15s;padding:4px 0;border-bottom:1.5px solid transparent}
+.nav-links a:hover,.nav-links a.active-link{color:var(--black);border-bottom-color:var(--black)}
+.nav-right{display:flex;align-items:center;gap:14px}
+.nav-cart{display:flex;align-items:center;gap:5px;font-size:13px;color:var(--text-2);cursor:pointer;transition:color .15s}
+.nav-cart:hover{color:var(--black)}
+.cart-badge{background:var(--red);color:#fff;font-size:10px;font-weight:700;min-width:18px;height:18px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-family:'Nunito',sans-serif;padding:0 4px}
+.nav-cta{padding:8px 20px;background:var(--red);color:#fff;border:none;border-radius:20px;font-size:13px;font-weight:500;cursor:pointer;font-family:'Noto Sans SC',sans-serif;transition:opacity .15s}
+.nav-cta:hover{opacity:.85}
+
+/* ══════════ PAGE SECTIONS ══════════ */
+.page-section{display:none}
+.page-section.active{display:block}
+
+/* ══════════════════════════════
+   LANDING PAGE
+══════════════════════════════ */
+
+/* Hero */
+.lp-hero{background:var(--sky);padding:64px 48px 0;text-align:center;position:relative;overflow:hidden}
+.lp-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(255,255,255,.12) 0%,transparent 60%);pointer-events:none}
+.lp-eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.75);margin-bottom:12px;font-weight:500}
+.lp-title{font-family:'Nunito',sans-serif;font-size:64px;font-weight:900;color:#fff;line-height:1.05;margin-bottom:12px;text-shadow:0 2px 0 rgba(0,0,0,.08)}
+.lp-sub{font-size:17px;color:rgba(255,255,255,.88);margin-bottom:36px;line-height:1.6}
+.lp-hero-btns{display:flex;gap:12px;justify-content:center;margin-bottom:48px;flex-wrap:wrap}
+.lp-btn-white{padding:14px 36px;background:#fff;color:var(--black);border:none;border-radius:50px;font-family:'Nunito',sans-serif;font-weight:800;font-size:15px;cursor:pointer;transition:transform .15s,box-shadow .15s;box-shadow:0 4px 20px rgba(0,0,0,.12)}
+.lp-btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.16)}
+.lp-btn-ghost{padding:14px 32px;background:transparent;color:#fff;border:2px solid rgba(255,255,255,.55);border-radius:50px;font-family:'Nunito',sans-serif;font-weight:800;font-size:15px;cursor:pointer;transition:border-color .15s,background .15s}
+.lp-btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.lp-chars-row{display:flex;justify-content:center;align-items:flex-end;gap:0;padding-bottom:0}
+.lp-char-pill{border-radius:36px 36px 0 0;position:relative;cursor:pointer;transition:transform .25s cubic-bezier(.34,1.56,.64,1)}
+.lp-char-pill:hover{transform:translateY(-10px)}
+.lp-pill-stem{position:absolute;top:-13px;left:50%;transform:translateX(-50%);width:10px;height:16px;background:var(--green);border-radius:3px 3px 0 0}
+.lp-pill-leaf{position:absolute;top:-17px;left:calc(50% + 3px);width:11px;height:7px;background:var(--green);border-radius:50% 50% 50% 0;transform:rotate(-30deg)}
+.lp-pill-eyes{display:flex;gap:7px;margin-top:12px;justify-content:center}
+.lp-pill-eye{width:11px;height:11px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.lp-pill-pupil{width:5px;height:5px;background:#1a1a1a;border-radius:50%}
+
+/* Color band */
+.color-band{height:6px;display:flex}
+.color-band div{flex:1}
+
+/* ── BRAND INTRO SECTION ── */
+.brand-intro{display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:0.5px solid var(--border)}
+.bi-visual{background:var(--black);padding:64px 48px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.bi-visual-bg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:.06}
+.bi-visual-bg-text{font-family:'Nunito',sans-serif;font-size:200px;font-weight:900;color:#fff;line-height:1;user-select:none}
+.bi-logo-big{font-family:'Nunito',sans-serif;font-size:42px;font-weight:900;color:#fff;z-index:1;text-align:center;line-height:1.2}
+.bi-logo-big span{color:var(--sky)}
+.bi-logo-sub{font-size:12px;letter-spacing:2px;color:rgba(255,255,255,.4);margin-top:10px;text-align:center;z-index:1;text-transform:uppercase}
+.bi-dots{display:flex;gap:8px;justify-content:center;margin-top:20px;z-index:1}
+.bi-dot{width:10px;height:10px;border-radius:50%}
+.bi-copy{padding:64px 52px;display:flex;flex-direction:column;justify-content:center}
+.bi-eyebrow{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--text-3);margin-bottom:12px}
+.bi-title{font-family:'Nunito',sans-serif;font-size:28px;font-weight:900;line-height:1.3;margin-bottom:14px}
+.bi-body{font-size:14px;color:var(--text-2);line-height:1.9;margin-bottom:20px}
+.bi-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+.bi-stat{background:var(--gray-50);border-radius:10px;padding:14px 12px;text-align:center}
+.bi-stat-val{font-family:'Nunito',sans-serif;font-size:20px;font-weight:900;color:var(--black);margin-bottom:2px}
+.bi-stat-lbl{font-size:11px;color:var(--text-3)}
+.bi-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:var(--black);cursor:pointer;border-bottom:1.5px solid var(--black);padding-bottom:1px;transition:opacity .15s}
+.bi-link:hover{opacity:.6}
+
+/* ── CHARS SECTION ── */
+.chars-section{padding:72px 48px;background:#fff}
+.sec-label{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--text-3);margin-bottom:8px}
+.sec-title{font-family:'Nunito',sans-serif;font-size:30px;font-weight:900;margin-bottom:6px;line-height:1.2}
+.sec-sub{font-size:14px;color:var(--text-2);margin-bottom:36px;line-height:1.7}
+.chars-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.char-card{border-radius:16px;padding:24px 16px;text-align:center;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.char-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.1)}
+.char-card-red{background:#fff0ee;border:1.5px solid var(--red)}
+.char-card-yellow{background:#fffbea;border:1.5px solid var(--yellow)}
+.char-card-orange{background:#fff5ec;border:1.5px solid var(--orange)}
+.char-card-brown{background:#f5eee8;border:1.5px solid var(--brown)}
+.char-avatar{width:60px;height:90px;border-radius:30px 30px 20px 20px;margin:0 auto 14px;position:relative;display:flex;align-items:flex-start;justify-content:center;padding-top:10px}
+.char-av-stem{width:9px;height:13px;background:var(--green);border-radius:3px 3px 0 0;position:absolute;top:-9px;left:50%;transform:translateX(-50%)}
+.char-av-eyes{display:flex;gap:6px;margin-top:6px}
+.char-av-eye{width:10px;height:10px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.char-av-pupil{width:5px;height:5px;background:#1a1a1a;border-radius:50%}
+.char-badge{display:inline-block;padding:4px 14px;border-radius:50px;font-family:'Nunito',sans-serif;font-size:12px;font-weight:800;margin-bottom:8px}
+.nb-red{background:var(--red);color:#fff}
+.nb-yellow{background:var(--yellow);color:#7a5c00}
+.nb-orange{background:var(--orange);color:#fff}
+.nb-brown{background:var(--brown);color:#fff}
+.char-role{font-size:14px;font-weight:700;color:var(--black);margin-bottom:5px}
+.char-desc{font-size:12px;color:var(--text-2);line-height:1.7;margin-bottom:8px}
+.char-action{font-size:11px;color:var(--text-3);font-style:italic}
+.char-detail-btn{margin-top:10px;padding:6px 14px;background:transparent;border:0.5px solid currentColor;border-radius:20px;font-size:12px;cursor:pointer;font-family:'Noto Sans SC',sans-serif;transition:background .15s}
+
+/* ── STORY SECTION ── */
+.story-section{background:var(--red);padding:80px 48px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.story-left .story-tag{display:inline-block;background:rgba(255,255,255,.2);color:#fff;font-size:11px;padding:4px 12px;border-radius:20px;margin-bottom:16px;letter-spacing:1px}
+.story-left h2{font-family:'Nunito',sans-serif;font-size:34px;font-weight:900;color:#fff;line-height:1.3;margin-bottom:16px}
+.story-left p{font-size:14px;color:rgba(255,255,255,.85);line-height:1.9;margin-bottom:24px}
+.story-btn{padding:13px 32px;background:#fff;color:var(--red);border:none;border-radius:50px;font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;cursor:pointer;transition:transform .15s}
+.story-btn:hover{transform:scale(1.04)}
+.story-right{display:flex;flex-direction:column;gap:14px}
+.story-card{background:rgba(255,255,255,.12);border-radius:14px;padding:18px 20px;border:0.5px solid rgba(255,255,255,.2)}
+.story-card h4{font-size:14px;font-weight:700;color:#fff;margin-bottom:6px}
+.story-card p{font-size:12px;color:rgba(255,255,255,.75);line-height:1.7}
+
+/* ── PALETTE ── */
+.palette-section{padding:72px 48px;background:var(--gray-50)}
+.palette-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:10px}
+.palette-row2{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.swatch{border-radius:14px;padding:22px 16px;min-height:100px;display:flex;flex-direction:column;justify-content:space-between}
+.swatch-face{display:flex;gap:6px;margin-bottom:8px}
+.swatch-eye{width:14px;height:14px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.swatch-pupil{width:7px;height:7px;border-radius:50%}
+.swatch-hex{font-family:'Nunito',sans-serif;font-size:13px;font-weight:800}
+
+/* ── PROCESS SECTION ── */
+.process-section{padding:72px 48px;border-bottom:0.5px solid var(--border)}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:36px;position:relative}
+.process-steps::before{content:'';position:absolute;top:28px;left:14%;right:14%;height:0.5px;background:var(--border)}
+.process-step{text-align:center;padding:0 16px;position:relative}
+.ps-num{width:56px;height:56px;border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-family:'Nunito',sans-serif;font-size:20px;font-weight:900;color:#fff;position:relative;z-index:1}
+.ps-title{font-size:14px;font-weight:700;color:var(--black);margin-bottom:6px}
+.ps-desc{font-size:12px;color:var(--text-2);line-height:1.6}
+
+/* ── SOCIAL SECTION ── */
+.social-section{padding:72px 48px}
+.social-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.social-post{border-radius:16px;overflow:hidden;border:0.5px solid var(--border);cursor:pointer;transition:transform .2s,box-shadow .2s}
+.social-post:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.1)}
+.sp-top{padding:24px 20px;min-height:130px;display:flex;flex-direction:column;justify-content:flex-end}
+.sp-top h3{font-family:'Nunito',sans-serif;font-size:18px;font-weight:900;color:#fff;line-height:1.3}
+.sp-body{padding:14px 16px;background:#fff}
+.sp-type{display:inline-block;font-size:10px;padding:2px 8px;border-radius:20px;font-weight:700;margin-bottom:6px}
+.sp-desc{font-size:12px;color:var(--text-2);line-height:1.6;margin-bottom:8px}
+.sp-tags{font-size:11px;color:var(--text-3)}
+
+/* ── MEDIA/PRESS SECTION ── */
+.media-section{padding:72px 48px;background:var(--gray-50);border-bottom:0.5px solid var(--border)}
+.media-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px}
+.media-card{background:#fff;border-radius:14px;padding:20px;border:0.5px solid var(--border)}
+.mc-icon{font-size:28px;margin-bottom:10px}
+.mc-source{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--text-3);margin-bottom:6px}
+.mc-title{font-size:14px;font-weight:500;color:var(--black);line-height:1.5;margin-bottom:8px}
+.mc-tag{font-size:11px;padding:2px 8px;border-radius:20px;background:var(--gray-50);color:var(--text-3)}
+
+/* ── CTA SECTION ── */
+.cta-section{padding:96px 48px;text-align:center;background:var(--black)}
+.cta-title{font-family:'Nunito',sans-serif;font-size:42px;font-weight:900;color:#fff;margin-bottom:10px}
+.cta-sub{font-size:15px;color:rgba(255,255,255,.55);margin-bottom:36px;line-height:1.7}
+.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.cta-btn-red{padding:15px 48px;background:var(--red);color:#fff;border:none;border-radius:50px;font-family:'Nunito',sans-serif;font-weight:800;font-size:16px;cursor:pointer;transition:transform .15s}
+.cta-btn-red:hover{transform:scale(1.04)}
+.cta-btn-outline{padding:15px 36px;background:transparent;color:rgba(255,255,255,.6);border:1.5px solid rgba(255,255,255,.2);border-radius:50px;font-family:'Nunito',sans-serif;font-weight:700;font-size:15px;cursor:pointer;transition:border-color .15s,color .15s}
+.cta-btn-outline:hover{border-color:rgba(255,255,255,.5);color:#fff}
+
+/* ══════════════════════════════
+   BRAND DETAIL PAGE
+══════════════════════════════ */
+.bd-hero{background:var(--black);padding:80px 48px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.bd-hero-left .bd-tag{display:inline-block;background:rgba(255,255,255,.1);color:rgba(255,255,255,.6);font-size:11px;padding:4px 12px;border-radius:20px;margin-bottom:20px;letter-spacing:1px;text-transform:uppercase}
+.bd-hero-left h1{font-family:'Nunito',sans-serif;font-size:48px;font-weight:900;color:#fff;line-height:1.1;margin-bottom:16px}
+.bd-hero-left p{font-size:15px;color:rgba(255,255,255,.7);line-height:1.9;margin-bottom:28px}
+.bd-hero-stats{display:flex;gap:24px}
+.bd-stat{border-left:2px solid rgba(255,255,255,.15);padding-left:14px}
+.bd-stat-val{font-family:'Nunito',sans-serif;font-size:24px;font-weight:900;color:#fff}
+.bd-stat-lbl{font-size:11px;color:rgba(255,255,255,.4);margin-top:2px}
+.bd-hero-right{display:flex;flex-direction:column;gap:12px}
+.bd-info-card{background:rgba(255,255,255,.06);border:0.5px solid rgba(255,255,255,.1);border-radius:12px;padding:16px 20px}
+.bd-ic-label{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:6px}
+.bd-ic-val{font-size:14px;color:#fff;line-height:1.6}
+
+.bd-timeline{padding:72px 48px;border-bottom:0.5px solid var(--border)}
+.bd-tl-items{display:flex;flex-direction:column;gap:0;margin-top:36px}
+.bd-tl-item{display:grid;grid-template-columns:120px 1fr;gap:32px;padding:28px 0;border-bottom:0.5px solid var(--border)}
+.bd-tl-item:last-child{border-bottom:none}
+.bd-tl-year{font-family:'Nunito',sans-serif;font-size:28px;font-weight:900;color:var(--text-3);line-height:1}
+.bd-tl-content h4{font-size:15px;font-weight:700;color:var(--black);margin-bottom:6px}
+.bd-tl-content p{font-size:13px;color:var(--text-2);line-height:1.8}
+.bd-tl-tag{display:inline-block;font-size:10px;padding:2px 8px;border-radius:20px;font-weight:700;margin-bottom:8px}
+
+.bd-values{padding:72px 48px;background:var(--gray-50);border-bottom:0.5px solid var(--border)}
+.bd-values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.bd-value-card{background:#fff;border-radius:14px;padding:24px 20px;border:0.5px solid var(--border)}
+.bd-vc-icon{font-size:32px;margin-bottom:14px}
+.bd-vc-title{font-size:16px;font-weight:700;color:var(--black);margin-bottom:8px}
+.bd-vc-body{font-size:13px;color:var(--text-2);line-height:1.8}
+
+.bd-ip{padding:72px 48px;border-bottom:0.5px solid var(--border)}
+.bd-ip-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px}
+.bd-ip-card{border-radius:14px;padding:20px 14px;text-align:center}
+.bd-ip-char{width:64px;height:100px;border-radius:32px 32px 22px 22px;margin:0 auto 12px;position:relative}
+.bd-ip-stem{width:9px;height:14px;background:var(--green);border-radius:3px 3px 0 0;position:absolute;top:-10px;left:50%;transform:translateX(-50%)}
+.bd-ip-eyes{display:flex;gap:6px;justify-content:center;margin-top:12px}
+.bd-ip-eye{width:10px;height:10px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.bd-ip-pupil{width:5px;height:5px;background:#1a1a1a;border-radius:50%}
+.bd-ip-name{font-family:'Nunito',sans-serif;font-size:14px;font-weight:900;margin-bottom:3px}
+.bd-ip-trait{font-size:12px;color:var(--text-2);margin-bottom:6px}
+.bd-ip-nut{display:inline-block;font-size:10px;padding:2px 8px;border-radius:20px;font-weight:700}
+.bd-ip-personality{font-size:11px;color:var(--text-3);margin-top:8px;line-height:1.6}
+
+.bd-farm{display:grid;grid-template-columns:1fr 1fr;border-bottom:0.5px solid var(--border)}
+.bd-farm-vis{background:var(--gray-50);padding:64px 40px;display:flex;align-items:center;justify-content:center}
+.bd-farm-copy{padding:64px 52px;display:flex;flex-direction:column;justify-content:center}
+.bd-farm-num{font-family:'Nunito',sans-serif;font-size:80px;font-weight:900;color:var(--black);line-height:1}
+.bd-farm-unit{font-size:13px;letter-spacing:2px;color:var(--text-3);margin-top:4px;margin-bottom:24px}
+.bd-farm-bullets{display:flex;flex-direction:column;gap:10px}
+.bd-fb{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--text-2)}
+.bd-fb-dot{width:5px;height:5px;border-radius:50%;background:var(--green);margin-top:7px;flex-shrink:0}
+
+/* ══════════════════════════════
+   PRODUCT PAGE
+══════════════════════════════ */
+.pp-hero{display:grid;grid-template-columns:1fr 1fr;min-height:520px}
+.pp-visual{background:var(--gray-50);display:flex;align-items:center;justify-content:center;padding:60px 40px;position:relative;overflow:hidden}
+.pp-peppers{display:flex;align-items:flex-end;justify-content:center;position:relative;z-index:1}
+.pp-pepper{border-radius:44px 44px 28px 28px;position:relative;cursor:pointer;transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .2s}
+.pp-pepper:hover{transform:translateY(-8px)}
+.pp-pepper.active{transform:translateY(-14px);box-shadow:0 20px 40px rgba(0,0,0,.15)}
+.pp-stem{position:absolute;top:-14px;left:50%;transform:translateX(-50%);width:11px;height:18px;background:var(--green);border-radius:4px 4px 0 0}
+.pp-leaf{position:absolute;top:-18px;left:calc(50% + 4px);width:12px;height:8px;background:var(--green);border-radius:50% 50% 50% 0;transform:rotate(-30deg)}
+.pp-hint{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);font-size:11px;color:var(--text-3);letter-spacing:1px;white-space:nowrap}
+.pp-info{padding:56px 52px;display:flex;flex-direction:column;justify-content:center}
+.pp-eyebrow{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--text-3);margin-bottom:14px}
+.pp-title{font-family:'Nunito',sans-serif;font-size:40px;font-weight:900;line-height:1.1;margin-bottom:8px}
+.pp-sub{font-size:14px;color:var(--text-2);line-height:1.8;margin-bottom:24px;min-height:50px}
+.pp-color-row{display:flex;align-items:center;gap:10px;margin-bottom:24px}
+.pp-cp-label{font-size:12px;color:var(--text-3)}
+.pp-cp-dot{width:24px;height:24px;border-radius:50%;cursor:pointer;border:2px solid transparent;outline:3px solid transparent;outline-offset:2px;transition:outline-color .15s,transform .15s}
+.pp-cp-dot:hover{transform:scale(1.1)}
+.pp-cp-dot.sel{outline-color:var(--black)}
+.pp-cp-name{font-size:12px;color:var(--text-2);margin-left:4px}
+.pp-price-row{display:flex;align-items:baseline;gap:10px;margin-bottom:20px}
+.pp-price{font-family:'Nunito',sans-serif;font-size:32px;font-weight:900}
+.pp-price-unit{font-size:13px;color:var(--text-3)}
+.pp-price-tag{font-size:11px;padding:3px 10px;background:#eaf3de;color:#27500a;border-radius:20px;font-weight:700}
+.pp-qty-row{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.pp-qty-ctrl{display:flex;align-items:center;border:0.5px solid #ddd;border-radius:8px;overflow:hidden}
+.pp-qty-btn{width:36px;height:36px;background:none;border:none;cursor:pointer;font-size:18px;color:var(--text-2);transition:background .15s}
+.pp-qty-btn:hover{background:var(--gray-50)}
+.pp-qty-num{width:36px;text-align:center;font-size:15px;font-weight:500}
+.pp-btn-buy{flex:1;padding:11px 0;background:var(--black);color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:500;cursor:pointer;font-family:'Noto Sans SC',sans-serif;transition:opacity .15s}
+.pp-btn-buy:hover{opacity:.85}
+.pp-btn-cart{padding:11px 16px;border:0.5px solid #ddd;border-radius:8px;font-size:20px;cursor:pointer;background:none;transition:background .15s}
+.pp-btn-cart:hover{background:var(--gray-50)}
+.pp-trust{font-size:12px;color:var(--text-3);line-height:2.2}
+.pp-trust span{color:var(--green);margin-right:5px}
+
+.pp-specs{display:grid;grid-template-columns:repeat(4,1fr);border-top:0.5px solid var(--border);border-bottom:0.5px solid var(--border)}
+.pp-spec{padding:22px 16px;text-align:center;border-right:0.5px solid var(--border)}
+.pp-spec:last-child{border-right:none}
+.pp-spec-val{font-family:'Nunito',sans-serif;font-size:22px;font-weight:900;margin-bottom:3px}
+.pp-spec-lbl{font-size:12px;color:var(--text-3)}
+
+.pp-feat{display:grid;grid-template-columns:1fr 1fr;border-bottom:0.5px solid var(--border)}
+.pp-feat.rev .pp-feat-vis{order:2}.pp-feat.rev .pp-feat-copy{order:1}
+.pp-feat-vis{background:var(--gray-50);display:flex;align-items:center;justify-content:center;padding:60px 40px;min-height:280px}
+.pp-feat-copy{padding:56px 52px;display:flex;flex-direction:column;justify-content:center}
+.pp-feat-eyebrow{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--text-3);margin-bottom:10px}
+.pp-feat-title{font-family:'Nunito',sans-serif;font-size:24px;font-weight:900;line-height:1.3;margin-bottom:10px}
+.pp-feat-body{font-size:14px;color:var(--text-2);line-height:1.9;margin-bottom:14px}
+.pp-feat-bullets{display:flex;flex-direction:column;gap:8px}
+.pp-fb{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--text-2)}
+.pp-fb-dot{width:5px;height:5px;border-radius:50%;background:var(--green);margin-top:7px;flex-shrink:0}
+
+.pp-variety{padding:64px 52px;border-bottom:0.5px solid var(--border)}
+.pp-variety-header{text-align:center;margin-bottom:32px}
+.pp-variety-title{font-family:'Nunito',sans-serif;font-size:22px;font-weight:900;margin-bottom:6px}
+.pp-variety-sub{font-size:13px;color:var(--text-3)}
+.pp-variety-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.pp-vcard{border:0.5px solid var(--border);border-radius:14px;padding:20px 14px;text-align:center;cursor:pointer;transition:border-color .15s,box-shadow .15s}
+.pp-vcard:hover{border-color:#bbb;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+.pp-vcard.active{border:1.5px solid var(--black)}
+.pp-vc-orb{width:58px;height:88px;border-radius:29px 29px 19px 19px;margin:0 auto 12px;position:relative}
+.pp-vc-stem{width:8px;height:12px;background:var(--green);border-radius:3px 3px 0 0;position:absolute;top:-9px;left:50%;transform:translateX(-50%)}
+.pp-vc-name{font-size:14px;font-weight:500;margin-bottom:4px}
+.pp-vc-role{font-size:12px;color:var(--text-3);margin-bottom:8px}
+.pp-vc-badge{display:inline-block;font-size:10px;padding:3px 8px;border-radius:20px;font-weight:700}
+
+.pp-nut{padding:64px 52px;background:var(--gray-50);border-bottom:0.5px solid var(--border)}
+.pp-nut-header{text-align:center;margin-bottom:32px}
+.pp-nut-title{font-family:'Nunito',sans-serif;font-size:22px;font-weight:900;margin-bottom:6px}
+.pp-nut-sub{font-size:13px;color:var(--text-3)}
+.pp-nut-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.pp-nut-card{background:#fff;border-radius:12px;padding:20px 14px;text-align:center;border:0.5px solid var(--border)}
+.pp-nut-icon{font-size:24px;margin-bottom:10px}
+.pp-nut-val{font-family:'Nunito',sans-serif;font-size:22px;font-weight:900;margin-bottom:4px}
+.pp-nut-lbl{font-size:12px;color:var(--text-3);line-height:1.5}
+
+.pp-reviews{padding:64px 52px;border-bottom:0.5px solid var(--border)}
+.pp-reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px}
+.pp-review-card{background:var(--gray-50);border-radius:12px;padding:18px}
+.pp-rc-stars{color:var(--yellow);font-size:14px;margin-bottom:8px}
+.pp-rc-text{font-size:13px;color:var(--text-2);line-height:1.7;margin-bottom:12px}
+.pp-rc-user{font-size:12px;color:var(--text-3);display:flex;align-items:center;gap:6px}
+.pp-rc-avatar{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;font-weight:700}
+
+.pp-footer-cta{padding:72px 52px;text-align:center}
+.pp-fc-title{font-family:'Nunito',sans-serif;font-size:30px;font-weight:900;margin-bottom:10px}
+.pp-fc-sub{font-size:14px;color:var(--text-2);margin-bottom:28px;line-height:1.7}
+.pp-fc-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.pp-fc-btn-primary{padding:13px 32px;background:var(--black);color:#fff;border:none;border-radius:8px;font-size:14px;cursor:pointer;font-family:'Noto Sans SC',sans-serif;transition:opacity .15s}
+.pp-fc-btn-primary:hover{opacity:.85}
+.pp-fc-btn-outline{padding:13px 28px;border:0.5px solid #ddd;border-radius:8px;font-size:14px;cursor:pointer;background:none;font-family:'Noto Sans SC',sans-serif;transition:background .15s}
+.pp-fc-btn-outline:hover{background:var(--gray-50)}
+
+/* ══════════ SHARED FOOTER ══════════ */
+.site-footer{padding:28px 48px;display:flex;align-items:center;justify-content:space-between;border-top:0.5px solid var(--border);flex-wrap:wrap;gap:12px}
+.sf-logo{font-family:'Nunito',sans-serif;font-size:16px;font-weight:900;cursor:pointer}
+.sf-logo span{color:var(--green)}
+.sf-links{display:flex;gap:18px}
+.sf-links a{font-size:12px;color:var(--text-3);text-decoration:none;cursor:pointer;transition:color .15s}
+.sf-links a:hover{color:var(--black)}
+.sf-info{font-size:12px;color:var(--text-3)}
+
+/* ══════════ TOAST ══════════ */
+#toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);background:var(--black);color:#fff;font-size:13px;padding:10px 22px;border-radius:24px;opacity:0;pointer-events:none;transition:opacity .25s;z-index:999;white-space:nowrap}
+#toast.show{opacity:1}
+
+/* ══════════ ANIMATIONS ══════════ */
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.lp-title,.lp-sub,.lp-hero-btns{animation:fadeUp .5s ease both}
+.lp-sub{animation-delay:.08s}
+.lp-hero-btns{animation-delay:.16s}
+
+/* ══════════ RESPONSIVE ══════════ */
+@media(max-width:960px){
+  .nav{padding:0 20px}.nav-links{display:none}
+  .lp-hero{padding:44px 20px 0}.lp-title{font-size:40px}
+  .lp-hero-btns{flex-direction:column;align-items:center}
+  .brand-intro,.story-section,.bd-hero,.bd-farm{grid-template-columns:1fr}
+  .bi-copy,.bd-hero-left,.bd-farm-copy{padding:40px 20px}
+  .bi-visual,.bd-farm-vis{padding:48px 20px;min-height:200px}
+  .chars-section,.palette-section,.process-section,.social-section,.media-section,.cta-section,.bd-timeline,.bd-values,.bd-ip,.pp-variety,.pp-nut,.pp-reviews,.pp-footer-cta{padding:48px 20px}
+  .chars-grid,.bd-ip-grid,.pp-variety-grid{grid-template-columns:repeat(2,1fr)}
+  .social-grid,.media-grid,.bd-values-grid,.pp-reviews-grid{grid-template-columns:1fr}
+  .pp-nut-grid{grid-template-columns:repeat(2,1fr)}
+  .process-steps{grid-template-columns:repeat(2,1fr);gap:20px}
+  .process-steps::before{display:none}
+  .pp-hero{grid-template-columns:1fr}
+  .pp-visual{min-height:240px;padding:36px 20px}
+  .pp-info{padding:28px 20px}.pp-title{font-size:28px}
+  .pp-specs{grid-template-columns:repeat(2,1fr)}
+  .pp-spec:nth-child(2){border-right:none}
+  .pp-feat{grid-template-columns:1fr}
+  .pp-feat.rev .pp-feat-vis,.pp-feat.rev .pp-feat-copy{order:0}
+  .pp-feat-copy{padding:28px 20px}.pp-feat-vis{padding:36px 20px;min-height:180px}
+  .site-footer{padding:20px;flex-direction:column;text-align:center}
+  .bd-hero-stats{flex-wrap:wrap;gap:16px}
+  .bd-tl-item{grid-template-columns:80px 1fr;gap:16px}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════ NAV ══════════ -->
+<nav class="nav">
+  <div class="nav-logo" onclick="showSection('landing')">Bon<span>Bon</span>vita<sup style="font-size:9px;font-weight:400">®</sup></div>
+  <ul class="nav-links">
+    <li><a id="nl-landing" onclick="showSection('landing')" class="active-link">首页</a></li>
+    <li><a id="nl-brand" onclick="showSection('brand')">品牌介绍</a></li>
+    <li><a id="nl-product" onclick="showSection('product')">立即选购</a></li>
+    <li><a onclick="showSection('landing');setTimeout(()=>document.getElementById('social-sec').scrollIntoView({behavior:'smooth'}),120)">小红书内容</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="nav-cart" onclick="showSection('product');setTimeout(()=>document.getElementById('pp-buy').scrollIntoView({behavior:'smooth',block:'center'}),120)">
+      🛒 <span class="cart-badge" id="cart-count">0</span>
+    </div>
+    <button class="nav-cta" onclick="showSection('product')">立即购买</button>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════
+     LANDING PAGE
+══════════════════════════════ -->
+<div class="page-section active" id="section-landing">
+
+  <section class="lp-hero">
+    <div class="lp-eyebrow">BonBonVita® · 荣荣农业 · 云南玉溪出品</div>
+    <h1 class="lp-title">BON BON 椒</h1>
+    <p class="lp-sub">海拔1620米长大的大彩椒 · 看起来凶 · 咬一口才知道有多甜</p>
+    <div class="lp-hero-btns">
+      <button class="lp-btn-white" onclick="showSection('product')">立即选购 →</button>
+      <button class="lp-btn-ghost" onclick="showSection('brand')">了解品牌故事</button>
+    </div>
+    <div class="lp-chars-row">
+      <div class="lp-char-pill" style="width:60px;height:108px;background:var(--orange);margin-right:-8px;z-index:1" onclick="showSection('product');setTimeout(()=>selectColor(1),150)">
+        <div class="lp-pill-stem"></div>
+        <div class="lp-pill-eyes"><div class="lp-pill-eye"><div class="lp-pill-pupil"></div></div><div class="lp-pill-eye"><div class="lp-pill-pupil"></div></div></div>
+      </div>
+      <div class="lp-char-pill" style="width:74px;height:136px;background:var(--red);z-index:4" onclick="showSection('product');setTimeout(()=>selectColor(0),150)">
+        <div class="lp-pill-stem"></div><div class="lp-pill-leaf"></div>
+        <div class="lp-pill-eyes"><div class="lp-pill-eye"><div class="lp-pill-pupil"></div></div><div class="lp-pill-eye"><div class="lp-pill-pupil"></div></div></div>
+      </div>
+      <div class="lp-char-pill" style="width:68px;height:124px;background:var(--brown);z-index:3;margin:0 -6px" onclick="showSection('product');setTimeout(()=>selectColor(3),150)">
+        <div class="lp-pill-stem"></div>
+        <div class="lp-pill-eyes"><div class="lp-pill-eye"><div class="lp-pill-pupil"></div></div><div class="lp-pill-eye"><div class="lp-pill-pupil"></div></div></div>
+      </div>
+      <div class="lp-char-pill" style="width:56px;height:100px;background:var(--yellow);z-index:2" onclick="showSection('product');setTimeout(()=>selectColor(2),150)">
+        <div class="lp-pill-stem"></div>
+        <div class="lp-pill-eyes"><div class="lp-pill-eye" style="background:rgba(0,0,0,.12)"><div class="lp-pill-pupil"></div></div><div class="lp-pill-eye" style="background:rgba(0,0,0,.12)"><div class="lp-pill-pupil"></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="color-band">
+    <div style="background:var(--yellow)"></div><div style="background:var(--orange)"></div>
+    <div style="background:var(--red)"></div><div style="background:var(--brown)"></div>
+    <div style="background:var(--pink)"></div><div style="background:var(--green)"></div>
+  </div>
+
+  <!-- Brand Intro -->
+  <section class="brand-intro">
+    <div class="bi-visual">
+      <div class="bi-visual-bg"><div class="bi-visual-bg-text">BBV</div></div>
+      <div style="z-index:1;text-align:center">
+        <div class="bi-logo-big">Bon<span>Bon</span>vita<sup style="font-size:18px;font-weight:400">®</sup></div>
+        <div class="bi-logo-sub">Yunnan · China · Est. 2023</div>
+        <div class="bi-dots">
+          <div class="bi-dot" style="background:var(--yellow)"></div>
+          <div class="bi-dot" style="background:var(--orange)"></div>
+          <div class="bi-dot" style="background:var(--red)"></div>
+          <div class="bi-dot" style="background:var(--brown)"></div>
+        </div>
+      </div>
+    </div>
+    <div class="bi-copy">
+      <div class="bi-eyebrow">关于我们</div>
+      <div class="bi-title">我们来自云南，<br>我们把阳光做成彩椒</div>
+      <div class="bi-body">荣荣农业扎根云南玉溪，在海拔1620米的高原上种植大彩椒。这里阳光充足、空气清新、昼夜温差大，是彩椒积累天然糖分的绝佳环境。我们的每一颗BonBon椒，都是大自然用时间和阳光酿造的甜。</div>
+      <div class="bi-stats">
+        <div class="bi-stat"><div class="bi-stat-val">1620m</div><div class="bi-stat-lbl">种植海拔</div></div>
+        <div class="bi-stat"><div class="bi-stat-val">4色</div><div class="bi-stat-lbl">彩椒品种</div></div>
+        <div class="bi-stat"><div class="bi-stat-val">0辣</div><div class="bi-stat-lbl">天然甜度</div></div>
+      </div>
+      <div class="bi-link" onclick="showSection('brand')">查看完整品牌介绍 →</div>
+    </div>
+  </section>
+
+  <!-- Characters -->
+  <section class="chars-section" id="chars-sec">
+    <div class="sec-label">IP Family</div>
+    <div class="sec-title">认识 BonBonVita 大家庭</div>
+    <div class="sec-sub">四种颜色，四种性格，每一颗都有自己的故事和营养能量</div>
+    <div class="chars-grid">
+      <div class="char-card char-card-red" onclick="showSection('brand');setTimeout(()=>document.getElementById('ip-section').scrollIntoView({behavior:'smooth'}),150)">
+        <div class="char-avatar" style="background:var(--red)"><div class="char-av-stem"></div><div class="char-av-eyes"><div class="char-av-eye"><div class="char-av-pupil"></div></div><div class="char-av-eye"><div class="char-av-pupil"></div></div></div></div>
+        <div class="char-badge nb-red">红椒椒</div>
+        <div class="char-role">热情小队长</div>
+        <div class="char-desc">性格最外向，爱分享，哪里有热闹哪里就有他！维C含量最高。</div>
+        <div class="char-action">大笑 · 挥手招呼</div>
+        <button class="char-detail-btn" style="color:var(--red)">了解更多</button>
+      </div>
+      <div class="char-card char-card-yellow" onclick="showSection('brand');setTimeout(()=>document.getElementById('ip-section').scrollIntoView({behavior:'smooth'}),150)">
+        <div class="char-avatar" style="background:var(--yellow)"><div class="char-av-stem"></div><div class="char-av-eyes"><div class="char-av-eye" style="background:rgba(0,0,0,.12)"><div class="char-av-pupil"></div></div><div class="char-av-eye" style="background:rgba(0,0,0,.12)"><div class="char-av-pupil"></div></div></div></div>
+        <div class="char-badge nb-yellow">黄椒椒</div>
+        <div class="char-role">阳光开心果</div>
+        <div class="char-desc">温柔又亲切，是大家的治愈担当。叶黄素丰富，好吃又护眼。</div>
+        <div class="char-action">眯眯笑 · 双手捧脸</div>
+        <button class="char-detail-btn" style="color:#9a7a00">了解更多</button>
+      </div>
+      <div class="char-card char-card-orange" onclick="showSection('brand');setTimeout(()=>document.getElementById('ip-section').scrollIntoView({behavior:'smooth'}),150)">
+        <div class="char-avatar" style="background:var(--orange)"><div class="char-av-stem"></div><div class="char-av-eyes"><div class="char-av-eye"><div class="char-av-pupil"></div></div><div class="char-av-eye"><div class="char-av-pupil"></div></div></div></div>
+        <div class="char-badge nb-orange">橘椒椒</div>
+        <div class="char-role">活力行动派</div>
+        <div class="char-desc">家族里的小太阳，永远在动！胡萝卜素含量丰富，充满活力。</div>
+        <div class="char-action">Wink · 拥抱</div>
+        <button class="char-detail-btn" style="color:var(--orange)">了解更多</button>
+      </div>
+      <div class="char-card char-card-brown" onclick="showSection('brand');setTimeout(()=>document.getElementById('ip-section').scrollIntoView({behavior:'smooth'}),150)">
+        <div class="char-avatar" style="background:var(--brown)"><div class="char-av-stem"></div><div class="char-av-eyes"><div class="char-av-eye"><div class="char-av-pupil"></div></div><div class="char-av-eye"><div class="char-av-pupil"></div></div></div></div>
+        <div class="char-badge nb-brown">咖椒椒</div>
+        <div class="char-role">好奇宝宝</div>
+        <div class="char-desc">有点搞怪调皮，好奇心最强。稀有品种，总有奇怪的小点子。</div>
+        <div class="char-action">眼睛大 · 歪头笑</div>
+        <button class="char-detail-btn" style="color:var(--brown)">了解更多</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story -->
+  <section class="story-section">
+    <div class="story-left">
+      <div class="story-tag">品牌故事</div>
+      <h2>在海拔1620米的云南玉溪，住着一群爱蹦跶的大彩椒</h2>
+      <p>阳光亮晶晶，空气清新又温柔。彩椒们每天晒着太阳慢慢长大——个头挺大，看起来有点"厉害"，但咬一口，是让人惊喜的甜。大彩椒们走路一蹦一蹦的，所以大家有时也叫他们"Bonbon椒"。</p>
+      <button class="story-btn" onclick="showSection('brand')">阅读完整品牌故事 →</button>
+    </div>
+    <div class="story-right">
+      <div class="story-card"><h4>🌿 产地纯净</h4><p>云南玉溪海拔1620米，远离工业污染，空气和土壤天然纯净，是彩椒生长的理想环境。</p></div>
+      <div class="story-card"><h4>☀️ 阳光充足</h4><p>高原强紫外线和充足日照，让彩椒自然积累糖分，造就天然的甜度与丰富的维生素。</p></div>
+      <div class="story-card"><h4>❄️ 昼夜温差</h4><p>12°C以上的昼夜温差，让彩椒生长节奏变慢，每一口都更加紧实、脆嫩、甜蜜。</p></div>
+    </div>
+  </section>
+
+  <!-- Palette -->
+  <section class="palette-section">
+    <div class="sec-label">Color Palette</div>
+    <div class="sec-title">品牌色彩方案</div>
+    <div class="sec-sub" style="margin-bottom:24px">七种颜色各有含义，红黄橙咖取自彩椒本身；粉色注入时尚感；蓝色呼应高原纯净；绿色代表自然生长</div>
+    <div class="palette-grid">
+      <div class="swatch" style="background:var(--yellow)">
+        <div class="swatch-face"><div class="swatch-eye" style="background:rgba(0,0,0,.15)"><div class="swatch-pupil" style="background:#1a1a1a"></div></div></div>
+        <div class="swatch-hex" style="color:#7a5c00">#FFCE00 · 黄椒椒</div>
+      </div>
+      <div class="swatch" style="background:var(--orange)">
+        <div class="swatch-face"><div class="swatch-eye" style="background:#fff"><div class="swatch-pupil" style="background:#1a1a1a"></div></div></div>
+        <div class="swatch-hex" style="color:#fff">#FF7C10 · 橘椒椒</div>
+      </div>
+      <div class="swatch" style="background:var(--red)">
+        <div class="swatch-face"><div class="swatch-eye" style="background:#fff"><div class="swatch-pupil" style="background:#1a1a1a"></div></div><div class="swatch-eye" style="background:#fff"><div class="swatch-pupil" style="background:#1a1a1a"></div></div></div>
+        <div class="swatch-hex" style="color:#fff">#F93B21 · 红椒椒</div>
+      </div>
+      <div class="swatch" style="background:var(--brown)">
+        <div class="swatch-face"><div class="swatch-eye" style="background:#fff"><div class="swatch-pupil" style="background:#1a1a1a"></div></div><div class="swatch-eye" style="background:#fff"><div class="swatch-pupil" style="background:#1a1a1a"></div></div></div>
+        <div class="swatch-hex" style="color:#fff">#7C2E2E · 咖椒椒</div>
+      </div>
+    </div>
+    <div class="palette-row2" style="margin-top:10px">
+      <div class="swatch" style="background:var(--pink)"><div></div><div class="swatch-hex" style="color:#7a2040">#FF9FB8 · 时尚粉</div></div>
+      <div class="swatch" style="background:var(--sky)"><div></div><div class="swatch-hex" style="color:#0c4a6e">#43C7F5 · 高原蓝</div></div>
+      <div class="swatch" style="background:var(--green)"><div></div><div class="swatch-hex" style="color:#fff">#008400 · 自然绿</div></div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="process-section">
+    <div class="sec-label">From Farm to Table</div>
+    <div class="sec-title">从云南到你家，全程把控</div>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="ps-num" style="background:var(--green)">1</div>
+        <div class="ps-title">高原种植</div>
+        <div class="ps-desc">云南玉溪海拔1620米，标准化温室，全程记录生长数据</div>
+      </div>
+      <div class="process-step">
+        <div class="ps-num" style="background:var(--orange)">2</div>
+        <div class="ps-title">当日采摘</div>
+        <div class="ps-desc">按订单采摘，确保新鲜度，采摘后24小时内发货</div>
+      </div>
+      <div class="process-step">
+        <div class="ps-num" style="background:var(--red)">3</div>
+        <div class="ps-title">冷链打包</div>
+        <div class="ps-desc">全程冷链保鲜，专业泡沫箱+冰袋，锁住新鲜与营养</div>
+      </div>
+      <div class="process-step">
+        <div class="ps-num" style="background:var(--brown)">4</div>
+        <div class="ps-title">顺丰直达</div>
+        <div class="ps-desc">顺丰速运，全国包邮，一般1-3天送达</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Posts -->
+  <section class="social-section" id="social-sec">
+    <div class="sec-label">小红书内容</div>
+    <div class="sec-title">30天内容矩阵</div>
+    <div class="sec-sub" style="margin-bottom:0">五个内容角度，持续种草不重复</div>
+    <div class="social-grid">
+      <div class="social-post">
+        <div class="sp-top" style="background:var(--red)"><h3>长得这么凶，居然一点都不辣？！</h3></div>
+        <div class="sp-body">
+          <div class="sp-type" style="background:#fff0ee;color:var(--red)">反差萌</div>
+          <div class="sp-desc">首发开篇帖，用红椒椒的大个子反差萌抓住眼球，引发初次关注。</div>
+          <div class="sp-tags">#大彩椒 #云南好物 #BonBonVita #反差萌</div>
+        </div>
+      </div>
+      <div class="social-post">
+        <div class="sp-top" style="background:var(--green)"><h3>海拔1620米，阳光太好，我们都长甜了</h3></div>
+        <div class="sp-body">
+          <div class="sp-type" style="background:#eaf3de;color:#27500a">产地故事</div>
+          <div class="sp-desc">深度产地叙事，建立品质信任感，强化高原纯净甜椒的品牌心智。</div>
+          <div class="sp-tags">#云南玉溪 #高原蔬菜 #产地直发 #天然无公害</div>
+        </div>
+      </div>
+      <div class="social-post">
+        <div class="sp-top" style="background:var(--brown)"><h3>咖椒椒今天问了一个问题……</h3></div>
+        <div class="sp-body">
+          <div class="sp-type" style="background:#f5eee8;color:var(--brown)">角色人格</div>
+          <div class="sp-desc">以咖椒椒小剧场形式让IP角色活起来，增强用户对品牌的情感连接。</div>
+          <div class="sp-tags">#咖椒椒 #BonBon家族 #可爱IP #营养蔬菜</div>
+        </div>
+      </div>
+      <div class="social-post">
+        <div class="sp-top" style="background:var(--sky)"><h3>夏天太上头，来颗BonBon椒冷静一下</h3></div>
+        <div class="sp-body">
+          <div class="sp-type" style="background:#e0f4fd;color:#0c4a6e">节气种草</div>
+          <div class="sp-desc">结合季节场景，生吃/榨汁/炒菜多场景种草，引导即时购买转化。</div>
+          <div class="sp-tags">#夏日食谱 #彩椒吃法 #健康轻食 #维C补充</div>
+        </div>
+      </div>
+      <div class="social-post">
+        <div class="sp-top" style="background:var(--orange)"><h3>测一测：你是BonBon家族的哪颗椒？</h3></div>
+        <div class="sp-body">
+          <div class="sp-type" style="background:#fff5ec;color:#854f0b">互动挑战</div>
+          <div class="sp-desc">引导评论区互动，提升账号权重，让用户主动分享带来裂变传播。</div>
+          <div class="sp-tags">#人格测试 #BonBon家族 #互动话题 #你是哪颗椒</div>
+        </div>
+      </div>
+      <div class="social-post">
+        <div class="sp-top" style="background:var(--pink)"><h3>有人拿BonBon椒拍出了大片？！</h3></div>
+        <div class="sp-body">
+          <div class="sp-type" style="background:#fbeaf0;color:#72243e">UGC转发</div>
+          <div class="sp-desc">转发优质买家秀或模拟UGC风格帖，增加真实感和社交信任度。</div>
+          <div class="sp-tags">#买家秀 #BonBonVita #彩椒大片 #用户分享</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-title">尝一颗，就知道了</div>
+    <div class="cta-sub">BonBonVita 大彩椒<br>云南玉溪直发 · 顺丰冷链 · 新鲜到家</div>
+    <div class="cta-btns">
+      <button class="cta-btn-red" onclick="showSection('product')">立即选购四色彩椒 →</button>
+      <button class="cta-btn-outline" onclick="showSection('brand')">了解品牌故事</button>
+    </div>
+  </section>
+
+</div><!-- /landing -->
+
+<!-- ══════════════════════════════
+     BRAND PAGE
+══════════════════════════════ -->
+<div class="page-section" id="section-brand">
+
+  <section class="bd-hero">
+    <div class="bd-hero-left">
+      <div class="bd-tag">Brand Story · 品牌故事</div>
+      <h1>我们把云南的阳光，做成了彩椒</h1>
+      <p>荣荣农业诞生于对高品质农产品的执着追求。在海拔1620米的云南玉溪，我们找到了这片与众不同的土地，决定用最纯粹的方式，种出让人惊喜的大彩椒。</p>
+      <div class="bd-hero-stats">
+        <div class="bd-stat"><div class="bd-stat-val">1620m</div><div class="bd-stat-lbl">种植海拔</div></div>
+        <div class="bd-stat"><div class="bd-stat-val">4+</div><div class="bd-stat-lbl">彩椒品种</div></div>
+        <div class="bd-stat"><div class="bd-stat-val">0 SHU</div><div class="bd-stat-lbl">辣度为零</div></div>
+        <div class="bd-stat"><div class="bd-stat-val">24h</div><div class="bd-stat-lbl">采摘后发货</div></div>
+      </div>
+    </div>
+    <div class="bd-hero-right">
+      <div class="bd-info-card">
+        <div class="bd-ic-label">品牌名称</div>
+        <div class="bd-ic-val">BonBonVita® · 荣荣农业</div>
+      </div>
+      <div class="bd-info-card">
+        <div class="bd-ic-label">产地</div>
+        <div class="bd-ic-val">云南省玉溪市 · 海拔 1620 米高原</div>
+      </div>
+      <div class="bd-info-card">
+        <div class="bd-ic-label">品种</div>
+        <div class="bd-ic-val">红椒椒 · 黄椒椒 · 橘椒椒 · 咖椒椒（四色大彩椒）</div>
+      </div>
+      <div class="bd-info-card">
+        <div class="bd-ic-label">品牌定位</div>
+        <div class="bd-ic-val">高原甜椒 · IP化农产品 · 看起来凶，其实超甜</div>
+      </div>
+      <div class="bd-info-card">
+        <div class="bd-ic-label">核心特点</div>
+        <div class="bd-ic-val">天然甜、零辣度、维C丰富、个头大、颜色亮丽</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="bd-timeline">
+    <div class="sec-label">Brand Journey</div>
+    <div class="sec-title">品牌成长历程</div>
+    <div class="bd-tl-items">
+      <div class="bd-tl-item">
+        <div class="bd-tl-year" style="color:var(--green)">起点</div>
+        <div class="bd-tl-content">
+          <div class="bd-tl-tag" style="background:#eaf3de;color:#27500a">发现</div>
+          <h4>发现云南玉溪的这片高原</h4>
+          <p>荣荣农业团队在云南玉溪发现了海拔1620米的高原农业资源。这里昼夜温差大、光照充足、土壤纯净，是种植优质甜椒的天然宝地。团队决定在此扎根，打造一个真正有故事的农业品牌。</p>
+        </div>
+      </div>
+      <div class="bd-tl-item">
+        <div class="bd-tl-year" style="color:var(--orange)">研发</div>
+        <div class="bd-tl-content">
+          <div class="bd-tl-tag" style="background:#fff5ec;color:#854f0b">培育</div>
+          <h4>四色大彩椒品种选育</h4>
+          <p>经过反复试验与品种筛选，确定了红、黄、橘、咖四种大彩椒品种。这四种彩椒各有特色：颜色各异代表不同的营养成分，共同点是个头大、果肉厚、零辣度、天然甜。</p>
+        </div>
+      </div>
+      <div class="bd-tl-item">
+        <div class="bd-tl-year" style="color:var(--red)">IP化</div>
+        <div class="bd-tl-content">
+          <div class="bd-tl-tag" style="background:#fff0ee;color:var(--red)">创新</div>
+          <h4>BonBonVita 品牌IP诞生</h4>
+          <p>将四种彩椒拟人化，创造了红椒椒、黄椒椒、橘椒椒、咖椒椒四大IP角色。每个角色有独特的性格设定和视觉形象，让农产品有了温度和故事，让消费者记住的不只是产品，而是一个有个性的品牌家族。</p>
+        </div>
+      </div>
+      <div class="bd-tl-item">
+        <div class="bd-tl-year" style="color:var(--sky)">上市</div>
+        <div class="bd-tl-content">
+          <div class="bd-tl-tag" style="background:#e0f4fd;color:#0c4a6e">进行中</div>
+          <h4>全渠道品牌推广</h4>
+          <p>通过小红书、抖音等社交平台进行IP内容推广，以"看起来凶，其实超甜"的品牌核心理念打动消费者。同时布局电商直发和礼盒定制，将云南高原的天然好物送到全国各地消费者的餐桌上。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="bd-values">
+    <div class="sec-label">Brand Values</div>
+    <div class="sec-title">我们的品牌价值观</div>
+    <div class="bd-values-grid">
+      <div class="bd-value-card">
+        <div class="bd-vc-icon">🌱</div>
+        <div class="bd-vc-title">天然纯粹</div>
+        <div class="bd-vc-body">坚持高原原生态种植，不追求反季节催熟，让彩椒在最自然的节奏下生长。我们相信，最好的农产品是大自然用时间酿造的。</div>
+      </div>
+      <div class="bd-value-card">
+        <div class="bd-vc-icon">💛</div>
+        <div class="bd-vc-title">真实有趣</div>
+        <div class="bd-vc-body">通过IP化的方式把农产品做得有温度、有故事。我们希望消费者买的不只是一颗椒，而是一种快乐的生活态度——看起来凶，其实超甜。</div>
+      </div>
+      <div class="bd-value-card">
+        <div class="bd-vc-icon">🚀</div>
+        <div class="bd-vc-title">品质承诺</div>
+        <div class="bd-vc-body">从采摘到送达，全程冷链保鲜。7天无理由退换，品质问题先行赔付。我们用行动兑现对每一位消费者的承诺，让放心买成为我们最基础的服务标准。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IP Detail -->
+  <section class="bd-ip" id="ip-section">
+    <div class="sec-label">IP Characters</div>
+    <div class="sec-title">四大角色详细设定</div>
+    <div class="sec-sub" style="margin-bottom:32px">每种颜色，藏着不一样的营养能量和小个性</div>
+    <div class="bd-ip-grid">
+      <div class="bd-ip-card" style="background:#fff0ee;border:1.5px solid var(--red)">
+        <div class="bd-ip-char" style="background:var(--red)"><div class="bd-ip-stem"></div><div class="bd-ip-eyes"><div class="bd-ip-eye"><div class="bd-ip-pupil"></div></div><div class="bd-ip-eye"><div class="bd-ip-pupil"></div></div></div></div>
+        <div class="bd-ip-name" style="color:var(--red)">红椒椒</div>
+        <div class="bd-ip-trait">热情小队长</div>
+        <div class="bd-ip-nut" style="background:var(--red);color:#fff">维C最高</div>
+        <div class="bd-ip-personality">性格最外向，爱分享，爱交朋友。哪里有热闹，哪里就有他！表情：大笑、挥手招呼。营养：维生素C含量最高，190mg/100g，约为橙子2倍。</div>
+      </div>
+      <div class="bd-ip-card" style="background:#fffbea;border:1.5px solid var(--yellow)">
+        <div class="bd-ip-char" style="background:var(--yellow)"><div class="bd-ip-stem"></div><div class="bd-ip-eyes"><div class="bd-ip-eye" style="background:rgba(0,0,0,.12)"><div class="bd-ip-pupil"></div></div><div class="bd-ip-eye" style="background:rgba(0,0,0,.12)"><div class="bd-ip-pupil"></div></div></div></div>
+        <div class="bd-ip-name" style="color:#9a7a00">黄椒椒</div>
+        <div class="bd-ip-trait">阳光开心果</div>
+        <div class="bd-ip-nut" style="background:var(--yellow);color:#7a5c00">叶黄素</div>
+        <div class="bd-ip-personality">有点安静，有点害羞，却又温柔又亲切，是大家的"治愈担当"。表情：眯眯笑、双手捧脸。营养：叶黄素丰富，呵护眼部健康，适合长期用眼人群。</div>
+      </div>
+      <div class="bd-ip-card" style="background:#fff5ec;border:1.5px solid var(--orange)">
+        <div class="bd-ip-char" style="background:var(--orange)"><div class="bd-ip-stem"></div><div class="bd-ip-eyes"><div class="bd-ip-eye"><div class="bd-ip-pupil"></div></div><div class="bd-ip-eye"><div class="bd-ip-pupil"></div></div></div></div>
+        <div class="bd-ip-name" style="color:var(--orange)">橘椒椒</div>
+        <div class="bd-ip-trait">活力行动派</div>
+        <div class="bd-ip-nut" style="background:var(--orange);color:#fff">胡萝卜素</div>
+        <div class="bd-ip-personality">家族里的小太阳，每天笑眯眯，精力满满，永远在动！表情：Wink、拥抱。营养：β-胡萝卜素丰富，有助于皮肤健康，活力满满的选择。</div>
+      </div>
+      <div class="bd-ip-card" style="background:#f5eee8;border:1.5px solid var(--brown)">
+        <div class="bd-ip-char" style="background:var(--brown)"><div class="bd-ip-stem"></div><div class="bd-ip-eyes"><div class="bd-ip-eye"><div class="bd-ip-pupil"></div></div><div class="bd-ip-eye"><div class="bd-ip-pupil"></div></div></div></div>
+        <div class="bd-ip-name" style="color:var(--brown)">咖椒椒</div>
+        <div class="bd-ip-trait">好奇宝宝</div>
+        <div class="bd-ip-nut" style="background:var(--brown);color:#fff">稀有品种</div>
+        <div class="bd-ip-personality">有点搞怪，有点调皮，好奇心最强，总有奇怪的小点子。表情：眼睛大、歪头笑。营养：独特的花青素含量，稀有品种，数量有限。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Farm -->
+  <section class="bd-farm">
+    <div class="bd-farm-vis">
+      <div style="text-align:center">
+        <div class="bd-farm-num">1620</div>
+        <div class="bd-farm-unit">METERS ABOVE SEA LEVEL</div>
+        <div style="display:flex;gap:10px;justify-content:center;margin-top:16px">
+          <div style="width:10px;height:10px;border-radius:50%;background:var(--yellow)"></div>
+          <div style="width:10px;height:10px;border-radius:50%;background:var(--orange)"></div>
+          <div style="width:10px;height:10px;border-radius:50%;background:var(--red)"></div>
+          <div style="width:10px;height:10px;border-radius:50%;background:var(--brown)"></div>
+        </div>
+      </div>
+    </div>
+    <div class="bd-farm-copy">
+      <div style="font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--text-3);margin-bottom:12px">Farm Story</div>
+      <div style="font-family:'Nunito',sans-serif;font-size:24px;font-weight:900;line-height:1.3;margin-bottom:12px">阳光亮晶晶，<br>空气清新又温柔</div>
+      <div style="font-size:14px;color:var(--text-2);line-height:1.9;margin-bottom:20px">在海拔1620米的云南玉溪，BonBon椒们每天晒着太阳慢慢长大。这里温差大、光照充足，是彩椒积累天然糖分的最佳环境。彩椒们个头都挺大，看起来有点"厉害"，但其实一点也不辣——咬一口，是让人惊喜的甜。</div>
+      <div class="bd-farm-bullets">
+        <div class="bd-fb"><div class="bd-fb-dot"></div><span>云南玉溪原产地直发，无中间商差价</span></div>
+        <div class="bd-fb"><div class="bd-fb-dot"></div><span>高原昼夜温差 ≥ 12°C，天然糖分自然积累</span></div>
+        <div class="bd-fb"><div class="bd-fb-dot"></div><span>标准化温室种植，全年稳定供应，品质如一</span></div>
+        <div class="bd-fb"><div class="bd-fb-dot"></div><span>单果重量 150–300g，比普通彩椒大 30%</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand CTA -->
+  <section class="cta-section">
+    <div class="cta-title">了解完了，是不是更想尝一颗？</div>
+    <div class="cta-sub">BonBonVita 大彩椒 · 云南直发 · 顺丰冷链</div>
+    <div class="cta-btns">
+      <button class="cta-btn-red" onclick="showSection('product')">立即选购 →</button>
+      <button class="cta-btn-outline" onclick="showSection('landing')">← 返回首页</button>
+    </div>
+  </section>
+
+</div><!-- /brand -->
+
+<!-- ══════════════════════════════
+     PRODUCT PAGE
+══════════════════════════════ -->
+<div class="page-section" id="section-product">
+
+  <section class="pp-hero">
+    <div class="pp-visual">
+      <div class="pp-peppers">
+        <div class="pp-pepper" id="pp-1" style="width:58px;height:100px;background:var(--orange);margin-right:-10px;z-index:1" onclick="selectColor(1)"><div class="pp-stem"></div></div>
+        <div class="pp-pepper active" id="pp-0" style="width:72px;height:136px;background:var(--red);z-index:4" onclick="selectColor(0)"><div class="pp-stem"></div><div class="pp-leaf"></div></div>
+        <div class="pp-pepper" id="pp-3" style="width:66px;height:122px;background:var(--brown);z-index:3;margin:0 -8px" onclick="selectColor(3)"><div class="pp-stem"></div></div>
+        <div class="pp-pepper" id="pp-2" style="width:54px;height:96px;background:var(--yellow);z-index:2" onclick="selectColor(2)"><div class="pp-stem"></div></div>
+      </div>
+      <div class="pp-hint">点击选择品种</div>
+    </div>
+    <div class="pp-info" id="pp-buy">
+      <div class="pp-eyebrow">云南玉溪 · 海拔 1620m · 顺丰冷链直发</div>
+      <div class="pp-title" id="pp-title">红椒椒</div>
+      <div class="pp-sub" id="pp-sub">热情小队长。性格最外向，爱分享，哪里有热闹哪里就有他。咬一口，是让人惊喜的清甜——一点都不辣。</div>
+      <div class="pp-color-row">
+        <span class="pp-cp-label">品种</span>
+        <div class="pp-cp-dot sel" style="background:var(--red)" id="cp-0" onclick="selectColor(0)"></div>
+        <div class="pp-cp-dot" style="background:var(--orange)" id="cp-1" onclick="selectColor(1)"></div>
+        <div class="pp-cp-dot" style="background:var(--yellow)" id="cp-2" onclick="selectColor(2)"></div>
+        <div class="pp-cp-dot" style="background:var(--brown)" id="cp-3" onclick="selectColor(3)"></div>
+        <span class="pp-cp-name" id="cp-name">红椒椒</span>
+      </div>
+      <div class="pp-price-row">
+        <span class="pp-price" id="pp-price">¥38</span>
+        <span class="pp-price-unit">/ 500g</span>
+        <span class="pp-price-tag">顺丰包邮</span>
+      </div>
+      <div class="pp-qty-row">
+        <div class="pp-qty-ctrl">
+          <button class="pp-qty-btn" onclick="changeQty(-1)">−</button>
+          <span class="pp-qty-num" id="qty">1</span>
+          <button class="pp-qty-btn" onclick="changeQty(1)">+</button>
+        </div>
+        <button class="pp-btn-buy" onclick="buyNow()">立即购买</button>
+        <button class="pp-btn-cart" onclick="addCart()" title="加入购物车">🛒</button>
+      </div>
+      <div class="pp-trust">
+        <div><span>✓</span>产地直发，当日采摘后24小时内发货</div>
+        <div><span>✓</span>全程冷链配送，新鲜到家有保障</div>
+        <div><span>✓</span>7天无理由退换，品质问题先行赔付</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="pp-specs">
+    <div class="pp-spec"><div class="pp-spec-val">1620m</div><div class="pp-spec-lbl">云南玉溪海拔</div></div>
+    <div class="pp-spec"><div class="pp-spec-val">0 SHU</div><div class="pp-spec-lbl">辣度为零</div></div>
+    <div class="pp-spec"><div class="pp-spec-val">4 色</div><div class="pp-spec-lbl">天然彩椒品种</div></div>
+    <div class="pp-spec"><div class="pp-spec-val">24h</div><div class="pp-spec-lbl">采摘后发货</div></div>
+  </div>
+
+  <section class="pp-feat">
+    <div class="pp-feat-vis">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+        <div style="width:88px;height:148px;border-radius:44px 44px 28px 28px;position:relative" id="pp-sil"><div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);width:11px;height:18px;background:var(--green);border-radius:4px 4px 0 0"></div></div>
+        <div style="font-size:12px;color:var(--text-3);letter-spacing:1px">个头大 · 颜色深 · 样子凶</div>
+      </div>
+    </div>
+    <div class="pp-feat-copy">
+      <div class="pp-feat-eyebrow">产品特点</div>
+      <div class="pp-feat-title">看起来凶，<br>咬一口才知道有多甜</div>
+      <div class="pp-feat-body">大彩椒们个头都挺大，看起来有点"厉害"，但其实一点也不辣。咬一口，是让人惊喜的甜——这是阳光和海拔给的礼物。</div>
+      <div class="pp-feat-bullets">
+        <div class="pp-fb"><div class="pp-fb-dot"></div><span>单果重量 150–300g，比普通彩椒大 30%</span></div>
+        <div class="pp-fb"><div class="pp-fb-dot"></div><span>果肉厚实，天然糖度偏高，口感清脆</span></div>
+        <div class="pp-fb"><div class="pp-fb-dot"></div><span>可生吃、榨汁、炒菜，一椒多用</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pp-feat rev">
+    <div class="pp-feat-vis">
+      <div style="text-align:center">
+        <div style="font-family:'Nunito',sans-serif;font-size:68px;font-weight:900;color:var(--black);line-height:1">1620</div>
+        <div style="font-size:12px;letter-spacing:2px;color:var(--text-3);margin-top:4px">METERS · YUNNAN · CHINA</div>
+        <div style="display:flex;gap:10px;justify-content:center;margin-top:18px">
+          <div style="width:10px;height:10px;border-radius:50%;background:var(--yellow)"></div>
+          <div style="width:10px;height:10px;border-radius:50%;background:var(--red)"></div>
+          <div style="width:10px;height:10px;border-radius:50%;background:var(--orange)"></div>
+          <div style="width:10px;height:10px;border-radius:50%;background:var(--brown)"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pp-feat-copy">
+      <div class="pp-feat-eyebrow">产地故事</div>
+      <div class="pp-feat-title">阳光亮晶晶，<br>空气清新又温柔</div>
+      <div class="pp-feat-body">在海拔 1620 米的云南玉溪，BonBon椒们每天晒着太阳慢慢长大。这里温差大、光照充足，是彩椒积累天然糖分的最佳环境。</div>
+      <div class="pp-feat-bullets">
+        <div class="pp-fb"><div class="pp-fb-dot"></div><span>云南玉溪原产地直发，无中间商</span></div>
+        <div class="pp-fb"><div class="pp-fb-dot"></div><span>高原昼夜温差 ≥ 12°C，甜度天然形成</span></div>
+        <div class="pp-fb"><div class="pp-fb-dot"></div><span>标准化温室种植，全年稳定供应</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pp-variety">
+    <div class="pp-variety-header">
+      <div class="pp-variety-title">认识四大 BonBon 椒</div>
+      <div class="pp-variety-sub">每种颜色，藏着不一样的营养能量</div>
+    </div>
+    <div class="pp-variety-grid">
+      <div class="pp-vcard active" id="vc-0" onclick="selectVariety(0)"><div class="pp-vc-orb" style="background:var(--red)"><div class="pp-vc-stem"></div></div><div class="pp-vc-name">红椒椒</div><div class="pp-vc-role">热情小队长</div><div class="pp-vc-badge" style="background:#fff0ee;color:#b82000">维C最高</div></div>
+      <div class="pp-vcard" id="vc-1" onclick="selectVariety(1)"><div class="pp-vc-orb" style="background:var(--orange)"><div class="pp-vc-stem"></div></div><div class="pp-vc-name">橘椒椒</div><div class="pp-vc-role">活力行动派</div><div class="pp-vc-badge" style="background:#fff5ec;color:#854f0b">胡萝卜素</div></div>
+      <div class="pp-vcard" id="vc-2" onclick="selectVariety(2)"><div class="pp-vc-orb" style="background:var(--yellow)"><div class="pp-vc-stem"></div></div><div class="pp-vc-name">黄椒椒</div><div class="pp-vc-role">阳光开心果</div><div class="pp-vc-badge" style="background:#fffbea;color:#7a5c00">叶黄素</div></div>
+      <div class="pp-vcard" id="vc-3" onclick="selectVariety(3)"><div class="pp-vc-orb" style="background:var(--brown)"><div class="pp-vc-stem"></div></div><div class="pp-vc-name">咖椒椒</div><div class="pp-vc-role">好奇宝宝</div><div class="pp-vc-badge" style="background:#f5eee8;color:#5a1a1a">稀有品种</div></div>
+    </div>
+  </section>
+
+  <section class="pp-nut">
+    <div class="pp-nut-header">
+      <div class="pp-nut-title">每 100g 营养亮点</div>
+      <div class="pp-nut-sub">以红椒椒为例 · 数据来源：中国食物成分表</div>
+    </div>
+    <div class="pp-nut-grid">
+      <div class="pp-nut-card"><div class="pp-nut-icon">🌿</div><div class="pp-nut-val">190mg</div><div class="pp-nut-lbl">维生素 C<br>约为橙子的 2 倍</div></div>
+      <div class="pp-nut-card"><div class="pp-nut-icon">☀️</div><div class="pp-nut-val">0.9mg</div><div class="pp-nut-lbl">维生素 E<br>天然抗氧化</div></div>
+      <div class="pp-nut-card"><div class="pp-nut-icon">❤️</div><div class="pp-nut-val">31kcal</div><div class="pp-nut-lbl">热量极低<br>低卡健康之选</div></div>
+      <div class="pp-nut-card"><div class="pp-nut-icon">💧</div><div class="pp-nut-val">92%</div><div class="pp-nut-lbl">水分含量<br>鲜嫩多汁</div></div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="pp-reviews">
+    <div class="pp-variety-header">
+      <div class="pp-variety-title">买家真实评价</div>
+      <div class="pp-variety-sub">来自全国各地的 BonBon 椒爱好者</div>
+    </div>
+    <div class="pp-reviews-grid">
+      <div class="pp-review-card">
+        <div class="pp-rc-stars">★★★★★</div>
+        <div class="pp-rc-text">第一次买完全是被"看起来凶"这个文案吸引的，没想到真的一点不辣！我家小孩特别爱吃，直接当水果啃，又脆又甜，以后会回购！</div>
+        <div class="pp-rc-user"><div class="pp-rc-avatar" style="background:var(--red)">小</div>小红书用户 · 北京</div>
+      </div>
+      <div class="pp-review-card">
+        <div class="pp-rc-stars">★★★★★</div>
+        <div class="pp-rc-text">云南直发真的新鲜，收到的时候椒还是硬的，颜色特别亮。榨汁之后颜色也好看，拍照超出片！橘椒椒颜色我最喜欢。</div>
+        <div class="pp-rc-user"><div class="pp-rc-avatar" style="background:var(--orange)">橘</div>抖音买家 · 上海</div>
+      </div>
+      <div class="pp-review-card">
+        <div class="pp-rc-stars">★★★★★</div>
+        <div class="pp-rc-text">买了一套四色礼盒送给爸妈，包装很好看，彩椒个头比超市的大一圈，老人家很喜欢，说是他们吃过最甜的彩椒。强烈推荐！</div>
+        <div class="pp-rc-user"><div class="pp-rc-avatar" style="background:var(--green)">礼</div>电商平台买家 · 广州</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pp-footer-cta">
+    <div class="pp-fc-title">尝一颗，就知道了</div>
+    <div class="pp-fc-sub">BonBonVita 大彩椒，云南直发，顺丰冷链，新鲜到家</div>
+    <div class="pp-fc-btns">
+      <button class="pp-fc-btn-primary" onclick="document.getElementById('pp-buy').scrollIntoView({behavior:'smooth',block:'center'})">立即选购</button>
+      <button class="pp-fc-btn-outline" onclick="showSection('brand')">了解品牌 →</button>
+      <button class="pp-fc-btn-outline" onclick="alert('礼盒咨询请联系客服微信：bonbonvita')">礼盒定制</button>
+    </div>
+  </section>
+
+</div><!-- /product -->
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="site-footer">
+  <div class="sf-logo" onclick="showSection('landing')">Bon<span>Bon</span>vita<sup style="font-size:8px;font-weight:400">®</sup></div>
+  <div class="sf-links">
+    <a onclick="showSection('landing')">首页</a>
+    <a onclick="showSection('brand')">品牌介绍</a>
+    <a onclick="showSection('product')">立即购买</a>
+    <a onclick="alert('客服微信：bonbonvita')">联系我们</a>
+  </div>
+  <div class="sf-info">© 2025 荣荣农业 · 云南玉溪 · 请替换为您的ICP备案号</div>
+</footer>
+
+<div id="toast"></div>
+
+<script>
+/* ── SECTION SWITCHING ── */
+function showSection(name){
+  document.querySelectorAll('.page-section').forEach(s=>s.classList.remove('active'));
+  document.getElementById('section-'+name).classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+  // update nav active state
+  document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('active-link'));
+  const map={landing:'nl-landing',brand:'nl-brand',product:'nl-product'};
+  if(map[name]) document.getElementById(map[name]).classList.add('active-link');
+}
+
+/* ── PRODUCT PAGE ── */
+const COLORS=[
+  {name:'红椒椒',color:'#F93B21',price:'¥38',sub:'热情小队长。性格最外向，爱分享，哪里有热闹哪里就有他。咬一口，是让人惊喜的清甜——一点都不辣。维C含量最高，190mg/100g。'},
+  {name:'橘椒椒',color:'#FF7C10',price:'¥36',sub:'活力行动派。家族里的小太阳，每天笑眯眯，精力满满，永远在动！β-胡萝卜素丰富，活力满满的选择。'},
+  {name:'黄椒椒',color:'#FFCE00',price:'¥35',sub:'阳光开心果。有点安静，有点害羞，却又温柔又亲切，是大家的治愈担当。叶黄素丰富，好吃又护眼。'},
+  {name:'咖椒椒',color:'#7C2E2E',price:'¥42',sub:'好奇宝宝。有点搞怪，有点调皮，好奇心最强。稀有品种，数量有限，独特花青素含量，甜而神秘。'},
+];
+let qty=1,cartN=0,sel=0;
+
+function selectColor(i){
+  sel=i;const c=COLORS[i];
+  document.getElementById('pp-title').textContent=c.name;
+  document.getElementById('pp-sub').textContent=c.sub;
+  document.getElementById('pp-price').textContent=c.price;
+  document.getElementById('cp-name').textContent=c.name;
+  document.getElementById('pp-sil').style.background=c.color;
+  for(let j=0;j<4;j++){
+    document.getElementById('cp-'+j).classList.toggle('sel',j===i);
+    document.getElementById('pp-'+j).classList.toggle('active',j===i);
+  }
+}
+function selectVariety(i){
+  for(let j=0;j<4;j++)document.getElementById('vc-'+j).classList.toggle('active',j===i);
+  selectColor(i);
+  document.getElementById('pp-buy').scrollIntoView({behavior:'smooth',block:'center'});
+}
+function changeQty(d){qty=Math.max(1,Math.min(99,qty+d));document.getElementById('qty').textContent=qty}
+function showToast(msg){
+  const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),2400);
+}
+function addCart(){
+  cartN+=qty;document.getElementById('cart-count').textContent=cartN;
+  showToast(COLORS[sel].name+' × '+qty+' 已加入购物车 🎉');
+}
+function buyNow(){
+  /* 把下面这行替换成你的购买链接：
+     window.open('https://item.taobao.com/你的商品ID','_blank');
+  */
+  showToast('请将 buyNow() 替换为您的电商购买链接');
+}
+</script>
+</body>
+</html>
